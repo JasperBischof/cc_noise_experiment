@@ -21,9 +21,9 @@ void setup() {
 
 void draw() {
 
-  //fill(0, 3);
-  //noStroke();
-  //rect(0, 0, width, height);
+  fill(0,10);
+  noStroke();
+  rect(0, 0, width, height);
 
   int colorRed = (int)map(mouseX, 0, width, 0, 255);
   int colorGreen = (int)map(mouseY, 0, height, 0, 255);
@@ -37,10 +37,10 @@ void draw() {
   x2 = map(noise(xoff2), 0, 1, 0, width);
   y2 = map(noise(yoff2), 0, 1, 0, height);
 
-  xoff = xoff + 0.03;
-  yoff = yoff + 0.03;
-  xoff2 = xoff2 + 0.03;
-  yoff2 = yoff2 + 0.03;
+  xoff = xoff + 0.01;
+  yoff = yoff + 0.01;
+  xoff2 = xoff2 + 0.01;
+  yoff2 = yoff2 + 0.01;
 
   fill(colorRed, colorGreen, 255);
   noStroke();
