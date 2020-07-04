@@ -6,7 +6,7 @@ float radius = 4;
 float xoff = 0;
 float yoff = 100;
 float xoff2 = 100;
-float yoff2 = 100;
+float yoff2 = 50;
 color c;
 
 void setup() {
@@ -21,12 +21,14 @@ void setup() {
 
 void draw() {
 
-  fill(0,10);
-  noStroke();
+  blendMode(SUBTRACT);
+  fill(255, 2);
   rect(0, 0, width, height);
+  blendMode(BLEND);
 
-  int colorRed = (int)map(mouseX, 0, width, 0, 255);
-  int colorGreen = (int)map(mouseY, 0, height, 0, 255);
+
+  int colorRed = (int)map(x, 0, width, 0, 255);
+  int colorGreen = (int)map(y, 0, height, 0, 255);
 
 //  int lod = (int)map(mouseY, 0, height, 0, 50);
 //  float falloff = map(mouseX, 0, width, 0, 0.5);
