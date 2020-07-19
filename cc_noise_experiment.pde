@@ -52,3 +52,8 @@ void draw() {
   strokeWeight(2);
   line(x, y, x2, y2);
 }
+
+void mousePressed()
+{
+  saveFrame("####.png");
+}
